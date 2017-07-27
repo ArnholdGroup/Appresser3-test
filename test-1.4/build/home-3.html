@@ -1,0 +1,11 @@
+<img src="img/appp-logo-700.png" class="custom-logo" />
+<ion-grid>
+	<ion-row>
+	  <ion-col col-6 *ngFor="let p of pages.menus.items" [ngClass]="p.extra_classes">
+		  <ion-card (click)="pushPage(p)" class="menu-card">
+		    <div class="card-title"><ion-icon *ngIf="p.class" name="{{p.class}}"></ion-icon></div>
+		    <div class="card-subtitle">{{p.title}}</div>
+		  </ion-card>
+	  </ion-col>
+	</ion-row>
+</ion-grid>
